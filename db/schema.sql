@@ -22,11 +22,10 @@ CREATE TABLE employees (
     PRIMARY KEY (id),
     firstName VARCHAR(30) NOT NULL,
     lastName VARCHAR(30) NOT NULL,
-    salary INTEGER(11),
-    managerID INTEGER(11) NOT NULL,
-    FOREIGN KEY (managerID) REFERENCES employees(id),
+    managerID INTEGER(11),
+    -- FOREIGN KEY (managerID) REFERENCES employees(id) ON DELETE SET NULL,
     deptID INTEGER(11) NOT NULL, 
     FOREIGN KEY (deptID) REFERENCES departments(id),
     roleID INTEGER(11) NOT NULL,
-    FOREIGN KEY (roleID) REFERENCES roles(id)
+    FOREIGN KEY (roleID) REFERENCES roles(id) 
 );
