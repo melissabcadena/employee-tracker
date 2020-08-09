@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS employees;
-CREATE DATABASE employees;
-USE employees;
+DROP DATABASE IF EXISTS employeeTracker;
+CREATE DATABASE employeeTracker;
+USE employeeTracker;
 
 CREATE TABLE departments(
     deptName VARCHAR(30) NOT NULL,
